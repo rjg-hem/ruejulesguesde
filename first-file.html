@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collectif Stop Tram — Hem</title>
+  <meta name="description" content="Collectif citoyen de Hem contre le projet de tramway : informations, arguments, actions et mobilisation." />
+  <style>
+    :root{--accent:#c62828;--bg:#f7f7f8;--card:#fff;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#111; background:var(--bg);line-height:1.5}
+    header{background:linear-gradient(90deg,#1f2937, #111827); color:#fff; padding:28px 16px}
+    .container{max-width:1000px;margin:0 auto;padding:20px}
+    nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;letter-spacing:0.4px}
+    .navlinks a{color:#d1d5db;text-decoration:none;margin-left:12px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 0}
+    h1{font-size:clamp(22px,4.2vw,36px);margin:0}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    .ctas{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+    .outline{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;color:#111}
+    main{padding:18px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    ul.reasons{padding-left:18px;margin:8px 0;color:var(--muted)}
+    footer{padding:28px 0;color:var(--muted)}
+    .small{font-size:0.9rem}
+    .muted{color:var(--muted)}
+    form input, form textarea{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;margin-top:8px}
+    .petition-count{font-weight:700;color:var(--accent)}
+    @media(min-width:900px){.hero{grid-template-columns:1fr 420px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Collectif Stop Tram — Hem</div>
+        <div class="navlinks small">
+          <a href="#about">À propos</a>
+          <a href="#arguments">Arguments</a>
+          <a href="#actions">Actions</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="hero">
+        <div>
+          <h1>Non au tramway à Hem — pour une transition réelle, pas de la communication</h1>
+          <p class="lead">Nous sommes des habitant·e·s de Hem qui refusons un projet imposé, mal chiffré et déconnecté des besoins réels. Ce site centralise les infos, les preuves et les actions concrètes pour s'opposer légalement et efficacement.</p>
+          <div class="ctas">
+            <a class="btn" href="https://www.change.org/p/non-au-doublement-de-la-m700-pour-une-mobilit%C3%A9-juste-propre-et-r%C3%A9siliente-sur-la-mel?recruiter=1356301203&recruited_by_id=19b44830-986c-11ef-9456-635940b77efc&utm_source=share_petition&utm_campaign=starter_onboarding_share_personal&utm_medium=copylink" target="_blank">Signer la pétition</a>
+            <button class="outline" onclick="scrollToSection('actions')">Rejoindre</button>
+            <button class="outline" onclick="shareSite()">Partager</button>
+          </div>
+          <p class="muted small" style="margin-top:12px">Le ton est honnête : on n'édulcore rien. Arguments factuels, actions non-violentes.</p>
+        </div>
+        <div class="card" aria-hidden="false">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="small muted">Soutiens sur Change.org</div>
+              <div class="petition-count">→ Pétition officielle en ligne</div>
+            </div>
+            <div style="text-align:right">
+              <div class="small muted">Prochain événement</div>
+              <div id="next-event" class="small">Distribution — 2 nov, 10h</div>
+            </div>
+          </div>
+          <hr style="margin:14px 0;border:none;border-top:1px solid #f0f0f0">
+          <div class="small muted">Dernières actions</div>
+          <ul class="muted small" style="margin-top:8px;padding-left:16px">
+            <li>Distribution de tracts — Sam. 2 nov, 10h (place centrale)</li>
+            <li>Réunion d'information — Lun. 4 nov, 18h (salle des fêtes)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section id="about" class="card">
+      <h2>Qui sommes‑nous ?</h2>
+      <p class="muted">Un collectif citoyen, apolitique dans les étiquettes mais engagé contre ce projet de tramway tel qu'il est présenté par la métropole. Notre objectif : obtenir des comptes transparents, une vraie étude d'impact et des alternatives moins coûteuses.</p>
+    </section>
+
+    <section id="arguments" style="margin-top:14px">
+      <div class="grid">
+        <div class="card">
+          <h3>Arguments clés</h3>
+          <ul class="reasons">
+            <li>Coût public mal chiffré et risque d'impôts locaux supplémentaires.</li>
+            <li>Impact sur le tissu commercial local (des rues piétonnes transformées).</li>
+            <li>Étude d'impact environnemental incomplète.</li>
+            <li>Alternatives (bus express, pistes cyclables, optimisation) insuffisamment explorées.</li>
+          </ul>
+          <p class="small muted">Pour chaque point, nous rassemblons documents sources et demandes de transparence.</p>
+        </div>
+        <div class="card">
+          <h3>Documents</h3>
+          <p class="muted small">Ici vous trouverez les mémos, réponses aux courriers officiels et tout ce qui sert notre argumentation.</p>
+          <ul class="small muted" style="margin-top:8px">
+            <li><a href="#" onclick="alert('Ajouter PDF ou lien')">Étude financière (brouillon)</a></li>
+            <li><a href="#" onclick="alert('Ajouter PDF ou lien')">Courrier à la Métropole</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="actions" class="card" style="margin-top:14px">
+      <h2>Actions & Mobilisation</h2>
+      <div class="grid">
+        <div>
+          <h4>Prochaines étapes</h4>
+          <ul class="muted small">
+            <li>Distribution d'infos locales</li>
+            <li>Réunion publique</li>
+            <li>Envoi collectif de courriers recommandés</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Comment aider</h4>
+          <ul class="muted small">
+            <li>Signer la pétition officielle</li>
+            <li>Tenir un stand d'information (on fournit le matériel)</li>
+            <li>Aider à la rédaction des courriers</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <a href="https://www.change.org/p/non-au-doublement-de-la-m700-pour-une-mobilit%C3%A9-juste-propre-et-r%C3%A9siliente-sur-la-mel?recruiter=1356301203&recruited_by_id=19b44830-986c-11ef-9456-635940b77efc&utm_source=share_petition&utm_campaign=starter_onboarding_share_personal&utm_medium=copylink" class="btn" target="_blank">→ Signez la pétition officielle sur Change.org</a>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:14px">
+      <h2>Contact</h2>
+      <p class="muted small">Mail collectif : <a href="mailto:collectif.stoptram.hem@example.com">collectif.stoptram.hem@example.com</a></p>
+      <form onsubmit="event.preventDefault();sendContact()">
+        <label>Nom</label>
+        <input id="cname" required>
+        <label>Message</label>
+        <textarea id="cmsg" rows="3" required></textarea>
+        <div style="margin-top:8px"><button class="btn">Envoyer</button></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="small muted">© Collectif Stop Tram — Hem</div>
+      <div class="small muted">Conçu pour la transparence et l'action non-violente</div>
+    </div>
+  </footer>
+
+  <script>
+    function sendContact(){
+      const name=document.getElementById('cname').value.trim();
+      const msg=document.getElementById('cmsg').value.trim();
+      if(!name||!msg)return alert('Remplissez les champs');
+      alert('Message envoyé. Nous répondrons par mail rapidement.');
+      document.getElementById('cname').value='';document.getElementById('cmsg').value='';
+    }
+    function scrollToSection(id){
+      const el=document.getElementById(id);
+      if(el)el.scrollIntoView({behavior:'smooth'});
+    }
+    function shareSite(){
+      if(navigator.share){navigator.share({title:document.title,text:'Signez la pétition contre le tramway à Hem',url:location.href}).catch(()=>{});}else{alert('Partagez simplement l\'URL du site.');}}
+  </script>
+</body>
+</html>
