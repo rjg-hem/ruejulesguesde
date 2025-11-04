@@ -3,9 +3,9 @@
     body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#111; background:var(--bg);line-height:1.5}
     header{background:linear-gradient(90deg,#1f2937, #111827); color:#fff; padding:28px 16px}
     .container{max-width:1000px;margin:0 auto;padding:20px}
-    nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    nav{display:flex;gap:12px;align-items:center;justify-content:space-between;width:80%;margin:0 auto}
     .logo{font-weight:700;letter-spacing:0.4px}
-    .navlinks a{color:#d1d5db;text-decoration:none;margin-left:12px}
+    .navlinks a{color:#d1d5db;font-size:1rem;text-decoration:none;margin-left:12px}
     .navlinks a.accent {color:var(--accent)}
      .navlinks a.actif {color:#2980d1}
     .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 0}
