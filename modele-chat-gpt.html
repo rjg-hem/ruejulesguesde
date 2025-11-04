@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collectif — Analyse du projet Tram (site)</title>
+  <meta name="description" content="Site de synthèse construit automatiquement à partir d'une présentation. Sections: sommaire, arguments, cartes, alternatives, actions." />
+  <style>
+    :root{--accent:#0b6;--bg:#f7f7f9;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+    header{background:linear-gradient(90deg, rgba(11,102,51,0.06), rgba(11,102,51,0.02));backdrop-filter:saturate(120%);border-bottom:1px solid rgba(15,23,42,0.04)}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:700;letter-spacing:0.2px}
+    .navlinks{display:flex;gap:12px}
+    a.button{background:var(--accent);color:#052; padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    main{padding:28px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,14,19,0.04)}
+    h1{margin:0 0 10px;font-size:22px}
+    h2{font-size:18px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 14px}
+    ul.clean{padding-left:18px;margin:8px 0}
+    .toc a{display:block;padding:8px 0;color:#0b6;text-decoration:none}
+    .metrics{display:flex;gap:12px;flex-wrap:wrap}
+    .metric{background:#f3fff6;padding:10px;border-radius:10px;font-weight:700}
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline .item{padding:10px;border-left:3px solid #e5e7eb;background:#fff;border-radius:8px}
+    footer{padding:28px;text-align:center;color:var(--muted)}
+    /* responsive */
+    @media (max-width:1000px){.grid{grid-template-columns:1fr} .navlinks{display:none}}
+    .map-placeholder{height:220px;border-radius:8px;background:linear-gradient(180deg,#eef2ff,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    pre.code{white-space:pre-wrap;background:#0f1724;color:#e6ffed;padding:12px;border-radius:8px;overflow:auto}
+    .cta-row{display:flex;gap:12px;align-items:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Collectif — TRAM (conversion PPT → site)</div>
+        <div class="navlinks">
+          <a class="button" href="#sommaire">Sommaire</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <article class="card">
+          <h1>Page d'accueil — synthèse</h1>
+          <p class="lead">Version site générée automatiquement à partir de la présentation fournie. Cette page présente les points-clés, objections et alternatives pour le projet étudié.</p>
+
+          <h2 id="sommaire">Sommaire</h2>
+          <div class="toc">
+            <a href="#arguments">Arguments principaux</a>
+            <a href="#donnees">Données & chiffrages</a>
+            <a href="#securite">Usages & sécurité</a>
+            <a href="#impact">Impacts : santé, patrimoine, économie</a>
+            <a href="#alternatives">Propositions alternatives</a>
+            <a href="#actions">Actions & ressources</a>
+          </div>
+
+          <hr />
+
+          <h2 id="arguments">Arguments principaux</h2>
+          <p class="lead">Résumé structuré des objections et constats. (Texte importé depuis la présentation.)</p>
+          <ul class="clean">
+            <li>Argument 1 — impact humain et nuisance pour riverains.</li>
+            <li>Argument 2 — incohérence écologique & pertes d'infrastructures douces.</li>
+            <li>Argument 3 — utilité programmatiq ue discutée au regard des flux réels.</li>
+          </ul>
+
+          <h2 id="donnees">Données & chiffrages</h2>
+          <p class="lead">Chiffres extraits : population, coûts estimés, capacité de rame. Tableaux et calculs en bas de page.</p>
+          <div class="card" style="margin-top:12px">
+            <h3>Estimation coûts / impact</h3>
+            <p class="lead">Tableau synthétique — modifiable.</p>
+            <pre class="code">Coût estimé tronçon (ex.) : 63 000 000 €
+Population locale : 18 700 hab
+Coût par habitant (ex.) : 3 368 €</pre>
+          </div>
+
+          <h2 id="securite">Usages & sécurité</h2>
+          <div class="card" style="margin-top:12px">
+            <h3>Points critiques</h3>
+            <ul class="clean">
+              <li>Perte de pistes cyclables</li>
+              <li>Entrave aux secours & livraisons</li>
+              <li>Risques vibratoires pour bâti ancien</li>
+            </ul>
+          </div>
+
+          <h2 id="impact">Impacts</h2>
+          <p class="lead">Santé, nuisances sonores, valeur immobilière, patrimoine historique.</p>
+
+          <div style="margin-top:14px">
+            <h3>Cartographie (zone d'influence)</h3>
+            <div class="map-placeholder">Carte / zone 500m autour des stations — remplacer par carte interactive</div>
+          </div>
+
+          <h2 id="alternatives">Alternatives proposées</h2>
+          <ul class="clean">
+            <li>Terminus alternatif + navettes électriques locales</li>
+            <li>Réexamen du tracé sur axes plus larges</li>
+            <li>Mesures d'atténuation (expertises sols, protection façades)</li>
+          </ul>
+
+          <h2 id="actions">Actions & ressources</h2>
+          <div class="timeline">
+            <div class="item"><strong>Enquêtes</strong> — collecter témoignages et preuves d'absence d'information.</div>
+            <div class="item"><strong>Expertises</strong> — demander diagnostics immobiliers/sols.</div>
+            <div class="item"><strong>Rencontres</strong> — planifier réunions avec élus et services.</div>
+          </div>
+
+        </article>
+
+        <article class="card" style="margin-top:18px">
+          <h2>Documents</h2>
+          <p class="lead">Fichiers importés depuis la source :</p>
+          <ul class="clean">
+            <li><a href="/mnt/data/Pr%C3%A9sentation%20TRAM%20-%20V2.pptx" target="_blank">Télécharger la présentation source (PPTX)</a></li>
+          </ul>
+
+          <div style="margin-top:12px" class="cta-row">
+            <a class="button" href="#actions">Voir actions</a>
+            <a class="button" href="#alternatives">Voir alternatives</a>
+          </div>
+        </article>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2>Navigation rapide</h2>
+          <nav class="toc">
+            <a href="#sommaire">Sommaire</a>
+            <a href="#arguments">Arguments</a>
+            <a href="#donnees">Données</a>
+            <a href="#impact">Impacts</a>
+            <a href="#actions">Actions</a>
+          </nav>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Galerie & captures</h2>
+          <div class="gallery">
+            <div style="height:90px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center">Image 1</div>
+            <div style="height:90px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center">Image 2</div>
+            <div style="height:90px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center">Image 3</div>
+            <div style="height:90px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center">Image 4</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Export</h2>
+          <p class="lead">Options :</p>
+          <ul class="clean">
+            <li>Télécharger le HTML (fichier unique)</li>
+            <li>Créer ZIP (HTML + images)</li>
+            <li>Publier sur GitHub Pages / Netlify</li>
+          </ul>
+          <div style="margin-top:10px">
+            <button onclick="downloadHTML()" style="padding:8px 10px;border-radius:8px;border:0;background:#0b6;color:#052;cursor:pointer">Télécharger HTML</button>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">Site généré — vérifiez le contenu et remplacez les images/cartes. Je peux continuer la conversion (améliorer le design, ajouter une carte interactive, exporter ZIP, ou déployer).</div>
+  </footer>
+
+  <script>
+    function downloadHTML(){
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'index.html'; document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
