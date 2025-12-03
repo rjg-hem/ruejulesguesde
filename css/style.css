@@ -4,13 +4,16 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica
 
 header{background:linear-gradient(90deg,#1f2937, #111827); color:#fff; padding:0 16px 28px 16px;}
 
-header .container{max-width:1000px;margin:0 auto;padding:0 0 20px 0;}
+header .containerTop{max-width:1000px;margin:0 auto;padding:0 0 20px 0;}
 
-.container{max-width:1000px;margin:0 auto;padding:0 0 20px 0;display: flex;
-  flex-direction: column;}
+.menuSticky {position: sticky;left: 0;top: 200px; background-color:#fff;display: flex; flex-direction: column;padding: 20px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;width: 300px;background:linear-gradient(90deg,#1f2937, #111827); z-index:100;}
+.menuSticky a {color: white; text-decoration: none;}
+
+.container{max-width:1000px;margin:20px auto;padding:0 0 20px 0;display: flex;
+  flex-direction: column;position: relative;}
 .logo{font-weight:700;letter-spacing:0.4px}
 
-nav{display:flex;gap:12px;align-items:center;justify-content:space-between;width:100%;margin:0 auto;position: sticky;top: 0;background:linear-gradient(90deg,#1f2937, #111827); padding: 28px 14%;}
+nav{display:flex;gap:12px;align-items:center;justify-content:space-between;width:100%;margin:0 auto;position: sticky;top: 0;background:linear-gradient(90deg,#1f2937, #111827); padding: 28px 14%;z-index:100;}
 .navlinks a{color:#d1d5db;font-size:1.2rem;margin-left:12px;padding: 10px;text-decoration: none;}
 .navlinks a.accent {color:var(--accent)}
 .navlinks a.actif {color:#2980d1;border-bottom: 1px solid white;}
@@ -38,6 +41,7 @@ form input, form textarea{width:100%;padding:10px;border:1px solid #e5e7eb;borde
 .petition-count{font-weight:700;color:var(--accent)}
 @media screen and (min-width:900px){
     .hero{grid-template-columns:1fr 420px}
+    
 }
 @media screen and (max-width:1400px){
     nav {
@@ -45,7 +49,10 @@ form input, form textarea{width:100%;padding:10px;border:1px solid #e5e7eb;borde
     }
 }
 @media screen and (max-width:1000px){
-    nav {
+    nav {padding: 5px;align-items: flex-start;}
+    .navlinks {
+        display: flex;
         flex-direction: column;
     }
+    .margeMobile {margin-left: 10px;}
 }
